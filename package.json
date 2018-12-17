@@ -1,0 +1,41 @@
+{
+  "name": "officer-ollie",
+  "version": "1.0.0",
+  "description": "A small static website as documentation for our project for Major Studio 1 at MPS CD (Parsons School of Design)",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && npm run build:md && npm run build:scss && npm run build:public",
+    "build:md": "eleventy",
+    "build:scss": "parcel build src/scss/main.scss",
+    "build:public": "parcel build \"src/public/**/*.*\" -d dist",
+    "dev": "concurrently \"npm run watch:md\" \"npm run watch:scss\" \"npm run watch:public\" \"npm run serve\"",
+    "serve": "browser-sync start --server dist --watch",
+    "watch:md": "eleventy --watch",
+    "watch:scss": "parcel watch src/scss/main.scss",
+    "watch:public": "parcel watch \"src/public/**/*.*\" -d dist",
+    "fix": "prettier --write \"src/**/*.{html,js,scss,md}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rijkvanzanten/officer-ollie.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rijkvanzanten/officer-ollie/issues"
+  },
+  "homepage": "https://github.com/rijkvanzanten/officer-ollie#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.6.0",
+    "browser-sync": "^2.26.3",
+    "concurrently": "^4.1.0",
+    "parcel-bundler": "^1.10.3",
+    "prettier": "^1.15.3",
+    "rimraf": "^2.6.2",
+    "sass": "^1.15.2"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "url": "/aa-meetings/",
+    "name": "AA Map (SQL)"
+  },
+  {
+    "url": "/dear-diary/",
+    "name": "Dear Diary (NoSQL)"
+  },
+  {
+    "url": "/theremin/",
+    "name": "Theremin (Streaming)"
+  }
+]

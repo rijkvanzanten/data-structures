@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Staatliches" rel="stylesheet">
+    <link rel="stylesheet" href="/main.css">
+    <title><%= title %></title>
+  </head>
+  <body>
+    <input type="checkbox" name="toggle-menu" id="toggle-menu">
+    <label for="toggle-menu">Menu</label>
+    <header>
+      <h1><a href="/">Data Structures</a></h1>
+      <nav>
+        <ul>
+          <% for (let i in navItems) { %>
+          <li>
+            <% if (page.url === navItems[i].url) { %>
+            <span><%= navItems[i].name %></span>
+            <% } else { %>
+            <a href="<%= navItems[i].url %>"><%= navItems[i].name %></a>
+            <% } %>
+          </li>
+          <% } %>
+        </ul>
+      </nav>
+    </header>
+    <main id="content">
+      <%- content %>
+    </main>
+  </body>
+</html>

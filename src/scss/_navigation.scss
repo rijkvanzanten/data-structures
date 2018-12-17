@@ -1,0 +1,129 @@
+body > header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translateX(-100%);
+  transition: transform 300ms $ease-leave;
+  width: 100%;
+  height: 100%;
+  background-color: $navigation-bg;
+  padding: 8px;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+
+  a:hover {
+    color: $accent;
+  }
+
+  img {
+    width: 70vw;
+    display: block;
+    margin: 20px auto;
+    max-width: 300px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 0;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  > p {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  li {
+    height: 44px;
+    position: relative;
+    display: block;
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid lighten($navigation-bg, 20%);
+    }
+
+    a,
+    span {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    span {
+      color: $accent;
+      font-weight: 700;
+    }
+  }
+}
+
+input[name="toggle-menu"] {
+  position: absolute;
+  left: -999px;
+  opacity: 0;
+}
+
+label[for="toggle-menu"] {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  background-color: $body-bg;
+  border: 4px solid $font-body-color;
+  border-radius: 22px;
+  z-index: 20;
+  height: 44px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+input[name="toggle-menu"]:checked {
+  & + label {
+    background-color: $accent;
+    color: white;
+  }
+
+  & ~ header {
+    transform: translateX(0%);
+    z-index: 10;
+    transition-timing-function: $ease-enter;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  input[name="toggle-menu"],
+  label[for="toggle-menu"] {
+    display: none;
+  }
+
+  body {
+    padding-left: 16rem;
+  }
+
+  body > header {
+    transform: translateX(0%);
+    transition: none;
+    width: 16rem;
+    border-right: 1px solid darken($navigation-bg, 20%);
+
+    img {
+      width: 8rem;
+    }
+  }
+}
