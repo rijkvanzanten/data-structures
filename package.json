@@ -1,7 +1,7 @@
 {
-  "name": "officer-ollie",
+  "name": "data-structures",
   "version": "1.0.0",
-  "description": "A small static website as documentation for our project for Major Studio 1 at MPS CD (Parsons School of Design)",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
