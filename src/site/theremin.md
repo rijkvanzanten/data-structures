@@ -81,6 +81,10 @@ There is a problem that occurs during data handling called backpressure. This is
 
 <video src="/th-vid.mp4" controls></video>
 
+[Live demo](https://ds-fa-3.rijks.website)\*
+
+\* There isn't really that much to see without me operating my Photon..
+
 ## Conclusion
 
 I have been fighting sensor data, network engineering, and basic maths for way too long. I'm super super super happy that I managed to get it working as I had invisioned, even though a shitty network or another backpressure can really screw with the result. I have learned a great deal about data streaming, buffers, TCP, the web audio API, and visualizing wavelengths. (I had no clue how to draw a sinewave before this).
