@@ -44,7 +44,7 @@ I came up with the following data structure:
 
 I think the general layout of Apple Maps on iOS works pretty well. It has a huge emphasis on the map itself, but manages to display the search form on top in a way that feels very "integrated", by using translucency and the famous Apple "frosted glass" effect.
 
-![Inspiration: Apple Maps](/aa-inspiration.png)
+![Inspiration: Apple Maps](/aa-inspiration.jpeg)
 
 ## Map Library Research
 
